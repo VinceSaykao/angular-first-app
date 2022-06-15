@@ -18,7 +18,14 @@ export class ServersComponent implements OnInit {
   // property holding a boolean value
   allowNewServer = false;
 
-  constructor() { }
+  // method created by angular
+  constructor() { 
+
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000)
+
+  }
 
   ngOnInit(): void {
   }

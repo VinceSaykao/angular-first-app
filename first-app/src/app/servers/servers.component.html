@@ -1,3 +1,11 @@
 
-<button>Click</button>
+
+<!-- brackets dynamically bind some properties and disable html property -->
+<!-- Property Binding that disabled to its own typescript property -->
+<button
+[disabled] = "!allowNewServer"
+>Click</button>
+
+<!-- innerText property set to  -->
+<p [innerText] = "allowNewServer" ></p>
 <p>servers works!</p>

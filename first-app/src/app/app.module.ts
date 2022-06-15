@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
     FormsModule
   ],
   providers: [],
+  // boostrap passes AppComponent argument array
   bootstrap: [AppComponent]
 })
 export class AppModule { }

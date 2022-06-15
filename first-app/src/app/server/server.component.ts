@@ -14,4 +14,16 @@ import { Component } from '@angular/core';
 
 export class ServerComponent {
 
+    // These are properties
+    // number data type
+    serverId: number = 10;
+    // number data string
+    serverStatus: string = 'offline';
+
+    // how to define a method, getServerSTatus is method name
+    getServerStatus() {
+        return this.serverStatus;
+    }
+    
+
 }

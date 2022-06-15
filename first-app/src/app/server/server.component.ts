@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 // then pass javascript object to configure, without configuration its not good for angular 
 // html tag selector should be a string 
 @Component ({
-
+    // each component needs to have a template
     selector: 'app-server', // can use this selector in other components
     templateUrl: './server.component.html',
 

@@ -1,5 +1,22 @@
 
 
+<!-- passing $event reserved variable name in template when using event binding, will be data emitted with event -->
+<!-- <input
+type="text"
+class="form-control"
+(input)="onUpdateServerName($event)"> -->
+
+
+<!-- Two Way Binding -->
+<!-- ngModel will trigger on event and update serverName automatically, since its two way, it will update value if we change serverName somewhere else -->
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
+
+<p>{{ serverName }} </p>
+
+
 <!-- brackets dynamically bind some properties and disable html property -->
 <!-- Property Binding that disabled to its own typescript property -->
 <!-- Call method with click -->
@@ -7,6 +24,8 @@
 [disabled] = "!allowNewServer"
 (click)="onCreateServer()"
 >Click</button>
+
+
 
 <p>{{ serverCreationStatus }}</p>
 
@@ -20,4 +39,7 @@
 <p [innerText] = "allowNewServer" ></p>
 
 <p>servers works!</p>
+
+
+
 

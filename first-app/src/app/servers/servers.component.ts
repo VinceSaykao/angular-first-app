@@ -18,6 +18,8 @@ export class ServersComponent implements OnInit {
   // property holding a boolean value
   allowNewServer = false;
   serverCreationStatus = 'No clicks was created';
+  // This is kinda like useState
+  serverName = 'TestServer';
 
   // method created by angular
   constructor() { 
@@ -35,6 +37,14 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     this.serverCreationStatus = 'Server was created';
 
+  }
+
+
+  // do this costing with syntax of tag because it informs type of this event is an html input element
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+    // console.log(event);
+    
   }
 
 }

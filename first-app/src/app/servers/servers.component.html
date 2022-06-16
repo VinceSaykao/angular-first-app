@@ -2,10 +2,22 @@
 
 <!-- brackets dynamically bind some properties and disable html property -->
 <!-- Property Binding that disabled to its own typescript property -->
+<!-- Call method with click -->
 <button
 [disabled] = "!allowNewServer"
+(click)="onCreateServer()"
 >Click</button>
 
-<!-- innerText property set to  -->
+<p>{{ serverCreationStatus }}</p>
+
+
+<!-- string interpolation -->
+<p [innerText]>{{allowNewServer}}</p>
+
+<!-- typically use property binding -->
+
+<!-- innerText property set to property binding -->
 <p [innerText] = "allowNewServer" ></p>
+
 <p>servers works!</p>
+

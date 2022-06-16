@@ -38,7 +38,23 @@ class="form-control"
 <!-- innerText property set to property binding -->
 <p [innerText] = "allowNewServer" ></p>
 
+
+
 <p>servers works!</p>
+
+
+<input 
+type="text"
+[(ngModel)]="username">
+
+<p>{{ username }}</p>
+
+<button 
+[disabled] =  "username === ''"
+
+
+
+>SHOWS</button>
 
 
 

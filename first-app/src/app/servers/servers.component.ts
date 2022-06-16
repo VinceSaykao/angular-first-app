@@ -20,6 +20,9 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No clicks was created';
   // This is kinda like useState
   serverName = 'TestServer';
+  username = '';
+  allowButton = false; 
+
 
   // method created by angular
   constructor() { 
@@ -36,7 +39,6 @@ export class ServersComponent implements OnInit {
   // creating new method, starting with "on"
   onCreateServer() {
     this.serverCreationStatus = 'Server was created' + " " + this.serverName;
-
   }
 
 
@@ -46,5 +48,10 @@ export class ServersComponent implements OnInit {
     // console.log(event);
     
   }
+
+  onUsername(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
+  }
+
 
 }

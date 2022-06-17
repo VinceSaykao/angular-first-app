@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 
 export class ServerComponent {
 
-    // These are properties
+    // These are propertiesnpm
     // number data type
     serverId: number = 10;
     // number data string

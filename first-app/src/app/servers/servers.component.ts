@@ -22,6 +22,7 @@ export class ServersComponent implements OnInit {
   serverName = 'TestServer';
   username = '';
   allowButton = false; 
+  serverCreated = false;
 
 
   // method created by angular
@@ -38,6 +39,7 @@ export class ServersComponent implements OnInit {
 
   // creating new method, starting with "on"
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created' + " " + this.serverName;
   }
 

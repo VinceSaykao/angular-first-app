@@ -27,11 +27,18 @@ class="form-control"
 
 
 
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+
+
+<!-- Adding directive inside tag
+ngIf is structural of DOM, adds it or doesn't add it! Star is required. 
+-->
+
+<p *ngIf="serverCreated">Server name is {{ serverName }} </p>
 
 
 <!-- string interpolation -->
-<p [innerText]>{{allowNewServer}}</p>
+<p [innerText]>{{ allowNewServer }}</p>
 
 <!-- typically use property binding -->
 
@@ -39,8 +46,6 @@ class="form-control"
 <p [innerText] = "allowNewServer" ></p>
 
 
-
-<p>servers works!</p>
 
 
 <input 
